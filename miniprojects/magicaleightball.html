@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magical Eight Ball - Samuel</title>
+
+    <style>
+      * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          display: grid;
+          justify-content: center;
+          align-items: center;
+      }
+
+      button {
+           margin: 70% 0 0 0;
+          padding: 7% 14% 7% 14%;
+          background: red;
+      }
+      </style>
+</head>
+<body>
+ 
+  <button  onclick="predict()">Predict</button>
+
+<script> 
+
+function predict () {
+
+let username = '';
+ 
+username ? document.write (`Hello, ${userName} `) :
+document.write (`Hello! `);
+
+let userQuestion = '"\Will I get better?\"';
+document.write (`The user asked; ${userQuestion} `);
+
+let randomNumber = Math.floor(Math.random() * 8);
+
+let eightBall = '';
+
+switch (randomNumber) {
+  case 0:
+  eightBall = '"\It is certain\"';
+  break;
+  case 1:
+  eightBall =  '"\It is decidedly so\"';
+  break;
+  case 2:
+  eightBall = '"\Reply hazy try again\"';
+  break;
+  case 3:
+  eightBall = '"\Cannot predict now\"';
+  break;
+  case 4:
+  eightBall = '"\Do not count on it\"';
+  break;
+  case 5:
+  eightBall = '"\My sources say no\"';
+  break;
+  case 6:
+  eightBall = '"\Outlook not so good\"';
+  break;
+  case 7:
+  eightBall = '"\Signs point to yes\"';
+  break;
+  default:
+  eightBall = '"\Come again?\"';
+  break;
+}
+  
+  document.write (`The eight ball answered ${eightBall}`);
+
+}
+
+</script> 
+
+</body> 
+</html>
+
