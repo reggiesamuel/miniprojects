@@ -39,34 +39,29 @@ button {
 function years() {
 //My Age
 let myAge = 24;
+    
+console.log (`When I am ${myAge} years old`);
 
-document.write (`When I am ${myAge} years old`);
 // Initial 2 Dog years
 let earlyYears = 2;
-
 earlyYears *= 10.5;
 
-
-// Later Years
+ // Later Years
 let laterYears = myAge - 2;
 
 // Later Years Rate of growth
 laterYears *= 4;
-
-document.write (` the value of my age in early dog years is = ${earlyYears} and 
+console.log (` the value of my age in early dog years is = ${earlyYears} and 
 the value of my age in later dog years = ${laterYears}.`) ;
 
 //My Age in Dog Years
 const myAgeInDogYears = earlyYears + laterYears;
+console.log (` Therefore my age in dog years = ${myAgeInDogYears}.`);
 
-document.write (` Therefore my age in dog years = ${myAgeInDogYears}.`);
-
+    
 let myName = 'Samuel'.toUpperCase();
-
-
-document.write (` My name is ${myName}. I am ${myAge} years old in human years
+console.log (` My name is ${myName}. I am ${myAge} years old in human years
  which is ${myAgeInDogYears} years in dog years.`);
-
 }
 
 </script> 
