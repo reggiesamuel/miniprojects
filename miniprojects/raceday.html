@@ -33,27 +33,26 @@
 <script> 
 
 function info () {
-
-  let raceNumber = Math.floor(Math.random() * 1000);
+let raceNumber = Math.floor(Math.random() * 1000);
 let earlyRegistrant = true; 
 let runnerAge = 19;
 
 if ( (runnerAge > 18) && (earlyRegistrant === true) ) {
      raceNumber += 1000;
     }
+
 if ( (runnerAge > 18) && (earlyRegistrant === true) ) {
-  document.write (`Runners over 18 who registered early will race at 9:30 a.m.
+console.log (`Runners over 18 who registered early will race at 9:30 a.m.
 Their race number is ${raceNumber}`);
 } else if ( (runnerAge > 18) && (earlyRegistrant === false) ) {
-  document.write (`Runners over 18 who registered late will race at 11:00 a.m.
+console.log (`Runners over 18 who registered late will race at 11:00 a.m.
 Their race number is ${raceNumber}`);
 } else if ( (runnerAge < 18) ) {
-  document.write (`Runners under 18 will race at 12:30 p.m regardless of registration time.
+console.log (`Runners under 18 will race at 12:30 p.m regardless of registration time.
 Their race number is ${raceNumber}`);
 } else {
-  document.write ('Kindly, go to the registration desk.');
+console.log ('Kindly, go to the registration desk.');
 }
-
 }
 
 </script> 
