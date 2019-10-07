@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Rock Paper Scissors - Samuel</title>
+    <title>Rock, Paper, Scissors - Samuel</title>
 
     <style>
       * {
@@ -66,15 +66,43 @@ function getComputerChoice () {
 }
 
 function determineWinner (userChoice, computerChoice) {
+
+//Special instance code 
   if ( (userChoice === computerChoice) ) {
     return `It's a tie`;
   }
 
   if ( (userChoice === 'bomb') ) {
-    return 'You destroyed your oponent';
+    return 'You destroyed your opponent! Congratulations!';
   }
-  
-  if ( (userChoice === 'rock') ) {
+//Special instance code 
+
+ //Logic code 
+if ((userChoice === 'rock') && (computerChoice === 'paper')) {
+  return 'The computer won!';
+      } else {
+        return 'You won!';
+      }
+
+if ((userChoice === 'paper') && (computerChoice === 'scissors')) {
+  return 'The computer won!';
+      } else {
+        return 'You won!';
+      }
+
+
+if ((userChoice === 'scissors') && (computerChoice === 'rock')) {
+  return 'The computer won!';
+      } else {
+        return 'You won!';
+      }
+}
+//Logic code
+
+
+//The above logic code can also be replaced by the following code
+
+/*  if ( (userChoice === 'rock') ) {
       if ( (computerChoice === 'paper') ) {
       return 'The computer won!';
       } else {
@@ -98,11 +126,11 @@ if ( (userChoice === 'scissors') ) {
         return 'You won!';
       }
 }
-
 }
+*/
 
 function playGame () {
-  let userChoice = getUserChoice('rock');
+  let userChoice = getUserChoice('bomb');
   let computerChoice = getComputerChoice();
   console.log (`You threw: ${userChoice}`);
   console.log (`The Computer threw: ${computerChoice}`);
