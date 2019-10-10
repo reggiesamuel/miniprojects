@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sleep Debt Calculator - Samuel</title>
+
+    <style>
+      * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          display: grid;
+          justify-content: center;
+          align-items: center;
+      }
+
+      button {
+           margin: 70% 0 0 0;
+          padding: 7% 14% 7% 14%;
+          background: red;
+      }
+      </style>
+</head>
+<body>
+ 
+<button  onclick="calc()">Calculate Debt</button>
+
+<script> 
+function getSleepHours (day) {
+  switch (day) {
+    case 'Monday':
+    return 8;
+    break;
+      
+    case 'Tuesday':
+    return 7;
+    break;
+      
+    case 'Wednesday':
+    return 9;
+    break;
+      
+    case 'Thursday':
+    return 11;
+    break;
+      
+    case 'Friday':
+    return 5;
+    break;
+      
+    case 'Saturday':
+    return 11;
+    break;
+      
+    case 'Sunday':
+    return 7;
+    break;
+  }
+
+}
+
+function getActualSleepHours () {
+  let sleepTotal = getSleepHours('Monday') + getSleepHours('Tuesday') + getSleepHours('Wednesday') + getSleepHours('Thursday') + getSleepHours('Friday') + getSleepHours('Saturday') + getSleepHours('Sunday');
+  
+return sleepTotal;
+}
+
+
+function getIdealSleepHours () {
+  let idealHours = 8;
+  return idealHours * 7;
+}
+
+ 
+function calculateSleepDebt () {
+  let actualSleepHours = getActualSleepHours();
+  let idealSleepHours = getIdealSleepHours();
+  
+  if ((actualSleepHours === idealSleepHours)) {
+    return `You slept for ${actualSleepHours} hours. You needed to sleep for ${idealSleepHours} hours. You got the perfect amount of sleep.`;
+  }
+  
+  if ((actualSleepHours > idealSleepHours)) {
+    return `You slept for ${actualSleepHours} hours. You needed to sleep for ${idealSleepHours} hours. You got more sleep than needed.`;
+  }
+  
+   if ((actualSleepHours < idealSleepHours)) {
+    return `You slept for ${actualSleepHours} hours. You needed to sleep for ${idealSleepHours} hours. You should get some rest.`;
+  }
+  
+}
+
+function calc ()  {
+  console.log (calculateSleepDebt() );
+}
+
+</script> 
+
+</body> 
+</html>
+
