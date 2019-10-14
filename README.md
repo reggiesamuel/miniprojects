@@ -1,2 +1,2 @@
 # miniprojects
-First Javascript Mini Projects
+Javascript Mini Projects
